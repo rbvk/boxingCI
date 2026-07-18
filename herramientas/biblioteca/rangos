@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Rangos — BoxingCI</title>
+<meta name="description" content="BoxingCI: biblioteca visual de boxeo sobre líneas, rangos, golpes, defensa y toma de decisiones."/>
+<link rel="stylesheet" href="../../assets/style.css"/>
+</head>
+<body><main class="site">
+<header class="topbar">
+<a class="logoLink" href="../../index.html"><span class="logo">BoxingCI</span><span class="logoSub">Combat Intelligence</span></a>
+<nav class="nav"><a class="" href="../../index.html">Inicio</a>
+<a class="" href="../../herramientas/teoria-de-las-lineas/index.html">Teoría de las Líneas</a>
+<a class="active" href="../../biblioteca/rangos/index.html">Rangos</a>
+<a class="" href="../../biblioteca/golpes/index.html">Golpes</a>
+<a class="" href="../../biblioteca/defensa/index.html">Defensa</a>
+</nav>
+</header>
+
+<section class="article"><span class="kicker">Biblioteca</span><h1>Rangos</h1>
+<p>Los <strong>rangos</strong> son zonas de distancia funcional. Indican qué golpes son efectivos, qué riesgo existe y qué salida conviene usar.</p>
+<div class="infoBox"><p><strong>Principio:</strong> el rango correcto permite golpear, defender y salir. El rango incorrecto te deja golpeando al aire o atrapado en 50/50.</p></div>
+<h2>Zonas principales</h2><div class="tableLike">
+<div class="row"><strong>Clinch / cerrado</strong>Distancia de amarre, control corporal y frames. Los golpes largos no funcionan; importa controlar, salir o golpear muy corto si hay espacio.</div>
+<div class="row"><strong>Interior / corta distancia</strong>Zona de hooks cortos, uppercuts y golpes compactos. Es peligrosa porque ambos pueden golpear rápido.</div>
+<div class="row"><strong>Media distancia</strong>Zona principal de combinaciones. Jab, cross, hooks y cambios de nivel funcionan, pero el rival también está en rango.</div>
+<div class="row"><strong>Larga distancia</strong>Zona de jab largo, cross largo, entradas con paso y salidas limpias. Menor riesgo si mantienes pies activos y mano de regreso.</div>
+<div class="row"><strong>Fuera de distancia</strong>No hay golpe limpio sin entrar. Sirve para fintar, observar, ajustar pies y preparar la entrada.</div>
+</div></section>
+
+<footer class="footer">BoxingCI — Hecho por Rodolfo Valle · Julio 2026</footer>
+</main></body></html>
