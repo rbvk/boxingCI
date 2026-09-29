@@ -1,0 +1,64 @@
+.punchTable{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  border:1px solid #ddd;
+  border-radius:14px;
+  overflow:hidden;
+  font-size:1rem;
+  line-height:1.55;
+}
+.punchTable th,.punchTable td{
+  padding:14px 12px;
+  text-align:left;
+  vertical-align:top;
+  border-bottom:1px solid #e3e3e3;
+}
+.punchTable thead th{
+  background:#111;
+  color:#fff;
+  font-size:.875rem;
+}
+.punchTable tbody th{
+  color:var(--red);
+  font-size:1.125rem;
+  font-weight:900;
+}
+.punchTable tbody tr:nth-child(even){background:#f6f6f6}
+.punchTable tbody tr:last-child>*{border-bottom:0}
+.punchName{width:20%}
+.punchHand{width:17%}
+.punchTable .punchName strong{color:#111}
+.punchNotes ul{padding-left:24px}
+
+@media(max-width:620px){
+  .punchTable{display:block;border:0;overflow:visible}
+  .punchTable thead{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip-path:inset(50%);
+    white-space:nowrap;
+  }
+  .punchTable tbody{display:block}
+  .punchTable tbody tr{
+    display:grid;
+    grid-template-columns:2.25rem minmax(0,1fr);
+    gap:4px 10px;
+    padding:14px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-left:4px solid var(--red);
+    border-radius:12px;
+    background:#f6f6f6;
+  }
+  .punchTable tbody tr:last-child{margin-bottom:0}
+  .punchTable tbody th,.punchTable td{padding:0;border:0;width:auto}
+  .punchTable tbody th{grid-column:1;grid-row:1 / span 2}
+  .punchName{grid-column:2;grid-row:1}
+  .punchHand{grid-column:2;grid-row:2;color:#555;font-size:.875rem}
+  .punchDescription{grid-column:1 / -1;padding-top:8px!important}
+}

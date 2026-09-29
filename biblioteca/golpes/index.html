@@ -5,6 +5,7 @@
 <title>Golpes — BOXINGCI</title>
 <meta name="description" content="BOXINGCI es una plataforma interactiva para aprender boxeo mediante visualizadores interactivos, análisis táctico, combinaciones, defensa, desplazamientos y recursos organizados para entrenar con mayor intención."/>
 <link rel="stylesheet" href="../../assets/style.css"/>
+<link rel="stylesheet" href="../../assets/golpes.css"/>
 </head>
 <body><main class="site">
 <header class="topbar">
@@ -19,13 +20,38 @@
 
 <section class="article"><span class="kicker">Biblioteca</span><h1>Golpes</h1>
 <p>Los golpes no existen aislados. Cada golpe funciona mejor cuando coincide con una <strong>línea</strong>, un <strong>rango</strong> y una <strong>salida</strong>.</p>
-<h2>Golpes por función</h2><div class="tableLike">
-<div class="row"><strong>Jab</strong>Controla distancia, mide reacción, ocupa la línea de mano adelantada y prepara entradas.</div>
-<div class="row"><strong>Cross</strong>Golpe recto de mano trasera. Funciona bien desde larga y media distancia si la línea está limpia.</div>
-<div class="row"><strong>Hook</strong>Golpe circular útil en media y corta distancia. Requiere ángulo, rotación y salida para no quedar en intercambio.</div>
-<div class="row"><strong>Uppercut</strong>Golpe ascendente para corta y media-corta distancia. Útil cuando el rival entra, baja cabeza o queda en línea cerrada.</div>
-<div class="row"><strong>Golpes compactos</strong>Golpes cortos de menor recorrido para interior, clinch parcial o intercambios cerrados.</div>
-</div><h2>Regla operativa</h2><p>Antes de elegir el golpe, decide: <strong>línea → rango → riesgo → salida</strong>.</p></section>
+<h2 id="punchTableTitle">Numeración de golpes</h2>
+<table class="punchTable" role="table" aria-labelledby="punchTableTitle">
+<thead role="rowgroup"><tr role="row">
+<th scope="col" role="columnheader">Nº</th>
+<th scope="col" role="columnheader">Golpe</th>
+<th scope="col" role="columnheader">Mano</th>
+<th scope="col" role="columnheader">Descripción breve</th>
+</tr></thead>
+<tbody role="rowgroup">
+<tr role="row"><th scope="row" role="rowheader">1</th><td class="punchName" role="cell"><strong>Jab</strong></td><td class="punchHand" role="cell">Mano adelantada</td><td class="punchDescription" role="cell">Golpe recto, rápido y directo. Controla distancia, inicia combinaciones, puntúa e interrumpe al rival.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">2</th><td class="punchName" role="cell"><strong>Recto (Cross)</strong></td><td class="punchHand" role="cell">Mano atrasada</td><td class="punchDescription" role="cell">Golpe recto de <strong>potencia</strong> ejecutado con la mano atrasada, utilizando el empuje del pie trasero para rotar coordinadamente cadera, tronco y hombro.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">3</th><td class="punchName" role="cell"><strong>Gancho delantero</strong></td><td class="punchHand" role="cell">Mano adelantada</td><td class="punchDescription" role="cell">Golpe curvo y lateral a corta o media distancia, generado mediante rotación de cadera y tronco.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">4</th><td class="punchName" role="cell"><strong>Gancho trasero</strong></td><td class="punchHand" role="cell">Mano atrasada</td><td class="punchDescription" role="cell">Golpe curvo y lateral con la mano posterior, normalmente con mayor rotación corporal y potencial de potencia.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">5</th><td class="punchName" role="cell"><strong>Uppercut delantero</strong></td><td class="punchHand" role="cell">Mano adelantada</td><td class="punchDescription" role="cell">Golpe ascendente y compacto con la mano adelantada, principalmente utilizado a corta distancia hacia el mentón.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">6</th><td class="punchName" role="cell"><strong>Uppercut trasero</strong></td><td class="punchHand" role="cell">Mano atrasada</td><td class="punchDescription" role="cell">Golpe ascendente con la mano posterior, generado desde piernas, cadera y tronco, especialmente efectivo a corta distancia.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">7</th><td class="punchName" role="cell"><strong>Golpe al hígado</strong></td><td class="punchHand" role="cell">Mano adelantada</td><td class="punchDescription" role="cell">Golpe diagonal ascendente al cuerpo, híbrido entre gancho y uppercut, dirigido a la zona hepática bajo las costillas derechas del oponente.</td></tr>
+<tr role="row"><th scope="row" role="rowheader">8</th><td class="punchName" role="cell"><strong>Golpe al bazo</strong></td><td class="punchHand" role="cell">Mano atrasada</td><td class="punchDescription" role="cell">Golpe diagonal ascendente al cuerpo, híbrido entre gancho y uppercut, dirigido al costado izquierdo del oponente bajo el reborde costal.</td></tr>
+</tbody></table>
+
+<section class="punchNotes" aria-labelledby="punchNotesTitle">
+<h2 id="punchNotesTitle">Notas</h2>
+<ul>
+<li><strong>Números impares (1, 3, 5, 7) = mano adelantada.</strong></li>
+<li><strong>Números pares (2, 4, 6, 8) = mano atrasada.</strong></li>
+<li><strong>Lectura rápida:</strong> impar = adelantada · par = atrasada.</li>
+<li>En <strong>guardia ortodoxa:</strong> mano adelantada = <strong>izquierda</strong> · mano atrasada = <strong>derecha</strong>.</li>
+<li>En <strong>guardia zurda/southpaw:</strong> mano adelantada = <strong>derecha</strong> · mano atrasada = <strong>izquierda</strong>.</li>
+<li>La numeración permite escribir combinaciones de forma compacta. Ejemplo: <strong>1–2–3 = jab → recto trasero → gancho delantero</strong>.</li>
+<li>Después de cada golpe, como principio general, la mano <strong>regresa a la guardia</strong> y se mantiene la estructura defensiva, salvo que la combinación indique una transición específica.</li>
+</ul>
+</section>
+<h2>Regla operativa</h2><p>Antes de elegir el golpe, decide: <strong>línea → rango → riesgo → salida</strong>.</p></section>
 
 <footer class="footer">BOXINGCI — Hecho por Rodolfo Valle · Julio 2026</footer>
 </main></body></html>
