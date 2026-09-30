@@ -28,6 +28,8 @@
 .punchTable tbody tr:last-child>*{border-bottom:0}
 .punchName{width:20%}
 .punchHand{width:17%}
+.punchSupplemental .punchName{width:27%}
+.punchRelation{width:22%}
 .punchTable .punchName strong{color:#111}
 .punchNotes ul{padding-left:24px}
 
@@ -61,4 +63,12 @@
   .punchName{grid-column:2;grid-row:1}
   .punchHand{grid-column:2;grid-row:2;color:#555;font-size:.875rem}
   .punchDescription{grid-column:1 / -1;padding-top:8px!important}
+  .punchSupplemental tbody tr{grid-template-columns:minmax(0,1fr)}
+  .punchSupplemental .punchName,
+  .punchSupplemental .punchHand,
+  .punchSupplemental .punchRelation{width:auto;grid-column:1}
+  .punchSupplemental .punchName{grid-row:1}
+  .punchSupplemental .punchHand,
+  .punchSupplemental .punchRelation{grid-row:2;color:#555;font-size:.875rem}
+  .punchSupplemental .punchDescription{grid-row:3}
 }
