@@ -1,0 +1,29 @@
+
+/* BOXINGCI · Editorial photo atlas (2026-10). Applies only to photo modules. */
+.boxingci-hero-photo{position:relative;margin:0;height:clamp(270px,39vw,450px);overflow:hidden;background:#070707}
+.boxingci-hero-photo>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 47%;filter:contrast(1.12) saturate(.78) brightness(.78)}
+.boxingci-hero-photo:after{position:absolute;inset:15% 0 0;content:"";pointer-events:none;background:linear-gradient(0deg,rgba(0,0,0,.89),transparent 85%)}
+.boxingci-hero-photo figcaption{position:absolute;z-index:1;left:clamp(18px,4vw,54px);right:clamp(18px,4vw,54px);bottom:24px;color:#fff;display:flex;align-items:flex-start;flex-direction:column;gap:7px}
+.hero-photo-kicker,.tech-photo-eyebrow{font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#ff5555}
+.boxingci-hero-photo figcaption strong{font-size:clamp(22px,3vw,35px);max-width:680px;line-height:1.1}
+.hero-photo-credit{color:#d2d2d2;font-size:11px}
+.hero-photo-credit a{color:inherit;text-underline-offset:2px}
+.tech-photo-section{margin:28px 0 36px;padding:0}
+.article .tech-photo-section-header h2{margin:6px 0 8px;border:0;padding:0;color:#111;font-size:clamp(23px,3vw,30px)}
+.tech-photo-section-header p{margin:0 0 20px;color:#333;max-width:760px}
+.tech-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tech-photo-card{margin:0;border:1px solid #ddd;border-radius:17px;overflow:hidden;background:#f8f8f8;display:flex;flex-direction:column}
+.tech-photo-media{height:260px;position:relative;background:#202020;overflow:hidden}
+.tech-photo-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.tech-photo-index{position:absolute;top:12px;left:12px;display:inline-block;background:rgba(0,0,0,.82);color:white;border-left:3px solid #d41111;border-radius:5px;padding:7px 9px;font-size:10px;font-weight:900;letter-spacing:.09em}
+.tech-photo-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.article .tech-photo-body h3{color:#111;font-size:20px;margin:0 0 6px}
+.article .tech-photo-body p{margin:0 0 12px;font-size:14px;line-height:1.5}
+.tech-photo-tags{display:flex;flex-wrap:wrap;gap:7px;padding:0;margin:0 0 14px!important;list-style:none}
+.article .tech-photo-tags li{margin:0;background:#ececec;color:#242424;border:1px solid #d8d8d8;border-radius:999px;padding:5px 9px;font-size:11px;line-height:1.25;font-weight:800}
+.article .tech-photo-body .tech-photo-note{background:#fff0e9;border-left:3px solid #b85624;padding:9px 11px;font-size:12px}
+.article .tech-photo-body .tech-photo-credit{margin:auto 0 0;color:#595959;font-size:11px;line-height:1.45;border-top:1px solid #ddd;padding-top:11px}
+.tech-photo-credit a{color:#8b2121;text-underline-offset:3px}
+.article .tech-photo-disclaimer{font-size:12px;color:#666;margin:13px 0}
+.tech-photo-warning .tech-photo-index{border-left-color:#f6b21b}
+@media(max-width:680px){.tech-photo-grid{grid-template-columns:1fr}.tech-photo-media{height:235px}.boxingci-hero-photo{height:320px}.boxingci-hero-photo figcaption{bottom:18px}}
