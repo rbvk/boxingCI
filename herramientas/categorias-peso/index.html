@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Categorías de peso — BOXINGCI</title>
+<meta name="description" content="Calculadora de categorías de peso de boxeo: compara peso actual y objetivo según World Boxing 2026 y LA28."/>
+<link rel="stylesheet" href="../../assets/style.css"/>
+<style>
+.weightHero{background:linear-gradient(125deg,#390909,#121212 60%);border:2px solid #620d0d;border-radius:24px;padding:27px 26px;margin-bottom:16px}
+.weightHero h1{font-size:clamp(30px,5vw,46px);margin:7px 0 9px}
+.weightHero p{max-width:760px;margin:0}
+.weightKicker{font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.12em;color:#ff9494}
+.calcGrid{display:grid;grid-template-columns:minmax(260px,.87fr) minmax(0,1.13fr);gap:16px;align-items:start}
+.calcPanel{border:1px solid rgba(255,255,255,.16);background:#111;border-radius:22px;padding:22px}
+.calcPanel h2{font-size:23px;margin-bottom:5px}
+.calcPanel p.muted{font-size:14px;margin:4px 0 20px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:14px;font-weight:800;margin:0 0 7px}
+.field input,.field select{width:100%;background:#080808;color:#fff;border:1.5px solid #555;border-radius:10px;font:inherit;padding:11px 12px;min-height:46px}
+.field input:focus,.field select:focus{border-color:#ed4646;outline:2px solid rgba(212,17,17,.4);outline-offset:2px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hint{font-size:12px;color:#aaa!important;line-height:1.5;margin:7px 0 0!important}
+.kgInput{position:relative}
+.kgInput:after{position:absolute;right:13px;top:14px;content:"kg";font-size:14px;color:#aaa;pointer-events:none}
+.kgInput input{padding-right:38px}
+.example,.copyButton{border-radius:11px;font:inherit;font-weight:850;padding:10px 14px;min-height:44px;cursor:pointer}
+.example{display:block;background:#080808;color:#fff;border:1px solid #777;width:100%}
+.example:hover{background:#303030}
+.copyButton{background:#d41111;color:#fff;border:1px solid #d41111}
+.copyButton:disabled{cursor:not-allowed;opacity:.45}
+.categoryLine{font-size:13px;color:#ddd!important;margin:14px 0!important}
+.resultGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.resultCard{background:#080808;border:1px solid #3c3c3c;border-radius:15px;padding:15px;min-width:0}
+.resultCard:last-child{border-color:#b14f4f}
+.resultEyebrow{font-size:11px!important;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin:0 0 8px!important}
+.resultLarge{font-size:clamp(27px,4vw,34px);font-weight:950;letter-spacing:-.04em;margin-bottom:8px}
+.resultCard h3{font-size:17px;line-height:1.3;margin:0 0 9px}
+.resultCard p:not(.resultEyebrow){font-size:12px;line-height:1.5;margin:0}
+.resultChange{display:flex;flex-direction:column;gap:6px;border-left:5px solid #d41111;border-radius:5px 12px 12px 5px;background:#2c1c1c;padding:15px;margin-top:13px}
+.resultChange strong{font-size:16px}
+.resultChange span{font-size:14px;color:#dadada}
+.feedback{color:#ffdea1!important;border:1px solid #746226;background:rgba(126,98,12,.14);padding:13px;border-radius:11px;font-size:14px;margin-top:15px}
+.fineprint{font-size:12px;margin:12px 0!important}
+.resultActions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:16px}
+#copyStatus{color:#ccc;font-size:12px}
+#classMap{margin-top:19px}
+#classMap h3{font-size:17px;margin-bottom:10px}
+.divisionList{display:grid;gap:5px}
+.divisionRow{display:flex;align-items:center;justify-content:space-between;gap:13px;border:1px solid #282828;background:#0b0b0b;border-radius:9px;padding:9px 10px;font-size:13px}
+.divisionRow.highlight{background:#261515;border-color:#a32b2b}
+.divisionRight{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:6px;text-align:right;color:#bdbdbd}
+.divisionRight b{font-size:9px;letter-spacing:.05em;padding:4px 6px;border-radius:6px}
+.tagCurrent{background:#eee;color:#111}.tagTarget{background:#d41111;color:#fff}
+.sources{margin-top:16px;padding:18px 23px;border:1px solid rgba(255,255,255,.14);border-radius:19px;background:rgba(255,255,255,.045)}
+.sources h2{font-size:19px}.sources p,.sources li{color:#bdbdbd;font-size:13px;line-height:1.6}.sources a{color:#ffabab}
+@media(max-width:750px){.calcGrid{grid-template-columns:1fr}.weightHero{padding:22px 18px}.calcPanel{padding:18px}.resultGrid{gap:8px}.resultCard{padding:12px}}
+@media(max-width:365px){.cols2,.resultGrid{grid-template-columns:1fr}}
+</style>
+<script defer src="calculator.js"></script>
+</head>
+<body><main class="site">
+<header class="topbar">
+<a class="logoLink" href="../../index.html"><span class="logo">BOXINGCI</span><span class="logoSub">Inteligencia de combate</span></a>
+<nav class="nav" aria-label="Navegación principal">
+<a href="../../index.html">Inicio</a>
+<a href="https://rbvk.github.io/visualizador-de-lineas/">Visualizador de líneas</a>
+<a href="../../biblioteca/guardia/index.html">Guardia básica</a>
+<a href="../../biblioteca/rangos/index.html">Rangos</a>
+<a href="../../biblioteca/golpes/index.html">Golpes</a>
+<a href="../../biblioteca/defensa/index.html">Defensa</a>
+<a href="index.html" class="active" aria-current="page">Categorías de peso</a>
+</nav></header>
+<section class="weightHero">
+<span class="weightKicker">Herramientas · Calculadora</span>
+<h1>Categorías de peso</h1>
+<p>Compara tu <strong style="color:#fff">peso actual</strong> y tu <strong style="color:#fff">peso objetivo</strong> para conocer las divisiones competitivas correspondientes.</p>
+</section>
+<div class="calcGrid">
+<section class="calcPanel" aria-labelledby="formTitle">
+<h2 id="formTitle">Tu comparación</h2>
+<p class="muted">Cambia los datos y los resultados se recalculan automáticamente.</p>
+<form id="weightForm" novalidate>
+<div class="field"><label for="format">Reglamento competitivo</label>
+<select id="format"><option value="world">World Boxing · 2026 (amateur)</option><option value="la28">Juegos Olímpicos · LA28 (2028)</option></select></div>
+<div class="cols2">
+<div class="field"><label for="age">Edad en el año del evento</label><input id="age" type="number" min="0" max="120" step="1" inputmode="numeric" placeholder="Ej. 30" autocomplete="off"/><p class="hint">Edad que cumples ese año.</p></div>
+<div class="field"><label for="sex">División competitiva</label><select id="sex"><option value="hombre">Masculina</option><option value="mujer">Femenina</option></select><p class="hint">Según el reglamento.</p></div>
+</div>
+<div class="cols2">
+<div class="field"><label for="currentWeight">Peso actual</label><div class="kgInput"><input id="currentWeight" inputmode="decimal" type="text" autocomplete="off" placeholder="Ej. 74"/></div></div>
+<div class="field"><label for="targetWeight">Peso objetivo</label><div class="kgInput"><input id="targetWeight" inputmode="decimal" type="text" autocomplete="off" placeholder="Ej. 70"/></div></div>
+</div>
+</form>
+<button id="example" class="example" type="button">Cargar ejemplo · 74 → 70 kg</button>
+<p class="hint">Los datos se procesan únicamente en tu navegador. No se guardan ni envían a servidores.</p>
+</section>
+<section class="calcPanel" aria-labelledby="resultTitle">
+<h2 id="resultTitle">Resultado</h2>
+<p class="muted">Tu división actual, la del peso objetivo y sus límites.</p>
+<div id="results" aria-live="polite"></div>
+<div class="resultActions"><button id="copyResult" class="copyButton" type="button" disabled>Copiar resultado</button><span id="copyStatus" role="status"></span></div>
+<div id="classMap"></div>
+</section>
+</div>
+<section class="sources">
+<h2>Reglamentos y condiciones</h2>
+<p><strong style="color:#fff">Límites:</strong> en World Boxing, una categoría de más de 65 y hasta 70 kg incluye exactamente 70,0 kg, pero no 70,1 kg. La clasificación de edad depende del año de nacimiento: U17 (15–16), U19 (17–18) y Elite (19–40). U15 y Masters requieren reglamentos específicos.</p>
+<p><strong style="color:#fff">LA28:</strong> se muestran los siete topes nominales oficiales por sexo. Sus mínimos y requisitos de inscripción deben confirmarse con el evento. La calculadora no confirma elegibilidad, aptitud médica ni que una meta de peso sea segura. Evita cortes rápidos de peso y deshidratación.</p>
+<ul>
+<li><a href="https://worldboxing.org/wp-content/uploads/2024/11/World-Boxing-Competition-Rules-Nov-2024-Approved.pdf" target="_blank" rel="noopener noreferrer">World Boxing — Competition Rules, artículos 2.1 y 2.2</a> (divisiones desde 2025).</li>
+<li><a href="https://worldboxing.org/wp-content/uploads/2026/06/WB-U19-World-Championships-2026-Handbook-Version-1.pdf" target="_blank" rel="noopener noreferrer">World Boxing — Campeonato U19 2026</a>.</li>
+<li><a href="https://worldboxing.org/ioc-approves-olympic-qualification-system-for-boxing-competition-at-la28/" target="_blank" rel="noopener noreferrer">World Boxing — Categorías LA28 aprobadas por el COI</a> (mayo 2026).</li>
+</ul>
+<p>Fuentes revisadas: octubre de 2026. Herramienta educativa independiente.</p>
+</section>
+<footer class="footer">BOXINGCI — Hecho por Rodolfo Valle · <a href="https://rodolfovalle.com/">rodolfovalle.com</a></footer>
+</main></body></html>
