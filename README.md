@@ -5,6 +5,7 @@ BOXINGCI es una plataforma interactiva para aprender boxeo mediante visualizador
 ## Herramientas
 
 - [Visualizador de líneas](https://rbvk.github.io/visualizador-de-lineas/).
+- [Calculadora de categorías de peso](https://rbvk.github.io/boxingCI/herramientas/categorias-peso/): compara peso actual y objetivo (World Boxing 2026 y LA28), límites de división, diferencias y grupos de edad.
 
 El visualizador se abre desde su sitio actual. La ruta anterior
 `herramientas/teoria-de-las-lineas/index.html` redirige allí para conservar
