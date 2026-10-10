@@ -143,72 +143,98 @@ html{scroll-behavior:auto!important}
 .is-revealing{opacity:1!important;transform:none!important}
 }
 
-
-/* BOXINGCI — desktop typography readability (mobile unchanged) */
+/* BOXINGCI — desktop readability v2: larger content + wider layout.
+   All rules apply above 900px; mobile CSS remains unchanged. */
 @media (min-width: 901px) {
-  /* Comfortable reading size in the shared layout. */
-  body { font-size: 18px; }
+  /* The previous 1280px cap made the entire page too narrow on large monitors. */
+  .site {
+    max-width: 1760px;
+    padding: 24px clamp(22px, 2.6vw, 46px) 58px;
+  }
+  body { font-size: 20px; }
+  .topbar.site-header { padding: 14px 20px; gap: 16px; }
+  .site-header .logo { font-size: 36px; }
+  .site-header .logoSub { font-size: 12px; }
   .site-nav > a.site-nav-link,
-  .site-nav .nav-dropdown > summary { font-size: 12px; }
-  .nav-dropdown-panel a { font-size: 15px; }
-  .site-header .logoSub { font-size: 11px; }
+  .site-nav .nav-dropdown > summary {
+    font-size: 14px;
+    min-height: 45px;
+    padding: 11px 10px;
+  }
+  .nav-dropdown-panel a { font-size: 17px; padding: 14px 16px; }
 
-  /* Home: descriptions, labels and calls to action. */
-  .hero-overline, .eyebrow-label { font-size: 13px; }
-  .home-hero-description { font-size: 18px; max-width: 455px; }
-  .hero-ctas .button { font-size: 15px; min-height: 50px; }
+  /* Homepage: preserve the cinematic headline while enlarging smaller copy. */
+  .hero-overline, .eyebrow-label { font-size: 15px; }
+  .home-hero-content { max-width: 790px; }
+  .home-hero-description {
+    font-size: 21px;
+    max-width: 510px;
+    line-height: 1.6;
+  }
+  .hero-ctas .button { font-size: 17px; min-height: 54px; padding: 13px 19px; }
   .home-hero-foot,
   .home-hero-foot .hero-photo-credit,
-  .hero-photo-credit a { font-size: 12px; }
-  .editorial-section-head p { font-size: 16px; max-width: 330px; }
-  .editorial-eyebrow { font-size: 12px; }
-  .editorial-blurb, .feature-desc { font-size: 15px; line-height: 1.6; }
-  .home-outro a { font-size: 15px; }
+  .hero-photo-credit a { font-size: 13px; }
+  .home-intro-strip { font-size: clamp(24px, 2.5vw, 36px); }
+  .editorial-section-head h2 { font-size: clamp(54px, 4.5vw, 78px); }
+  .editorial-section-head p {
+    font-size: 19px;
+    max-width: 420px;
+    line-height: 1.6;
+  }
+  .editorial-body { gap: 10px; padding: 20px 21px 24px; }
+  .editorial-eyebrow { font-size: 14px; }
+  .editorial-title, .feature-title { font-size: clamp(32px, 2.3vw, 42px); }
+  .editorial-blurb, .feature-desc { font-size: 18px; line-height: 1.6; }
+  .feature-card-copy { gap: 12px; padding: 21px; }
+  .editorial-count { font-size: 38px; }
+  .home-outro a { font-size: 17px; }
 
-  /* Educational pages: body, tables, indices and visual explanations. */
-  .article p, .article li { font-size: 18px; }
-  .article h2 { font-size: clamp(30px, 2.7vw, 36px); }
-  .article h3 { font-size: 23px; }
-  .article table, .guardTable, .defenseTable, .punchTable { font-size: 18px; }
-  .guardIndex a, .defenseIndex li, .defenseIndexExtras { font-size: 16px; }
-  .guardTable thead th, .defenseTable thead th, .punchTable thead th { font-size: 16px; }
+  /* Readable instructional content across the complete bibliography. */
+  .article p, .article li { font-size: 20px; }
+  .article h2 { font-size: clamp(34px, 3vw, 44px); }
+  .article h3 { font-size: 26px; }
+  .article table, .guardTable, .defenseTable, .punchTable { font-size: 20px; }
+  .guardIndex a, .defenseIndex li, .defenseIndexExtras { font-size: 18px; }
+  .guardTable thead th, .defenseTable thead th, .punchTable thead th { font-size: 18px; }
   .guardEyebrow, .guardFlag, .guardCaption,
   .defenseEnglish, .defenseDecisions span, .defenseSources span,
-  .punchHand, .punchRelation { font-size: 15px; }
-  .article .tech-photo-body p { font-size: 17px; }
-  .article .tech-photo-body h3 { font-size: 23px; }
+  .punchHand, .punchRelation { font-size: 17px; }
+  .article .tech-photo-body p { font-size: 19px; }
+  .article .tech-photo-body h3 { font-size: 26px; }
   .article .tech-photo-tags li,
   .article .tech-photo-body .tech-photo-note,
-  .article .tech-photo-disclaimer { font-size: 14px; }
+  .article .tech-photo-disclaimer { font-size: 16px; }
   .article .tech-photo-body .tech-photo-credit,
-  .tech-photo-index { font-size: 13px; }
+  .tech-photo-index { font-size: 14px; }
 
-  /* Interactive atlas: phase explanations and controls. */
+  /* Atlas: controls and technical explanations. */
   .atlas-crumb, .atlas-kicker, .atlas-settings label,
-  .atlas-settings select, .atlas-phase-btn strong { font-size: 15px; }
-  .atlas-hero .lead { font-size: 20px; }
-  .atlas-tagline { font-size: 17px; }
-  .atlas-takeaway { font-size: 18px; }
-  .atlas-focus p, .atlas-risk { font-size: 16px; }
-  .atlas-panel h2 { font-size: 26px; }
-  .atlas-panel h3 { font-size: 19px; }
-  .atlas-panel p, .atlas-panel li { font-size: 17px; }
-  .atlas-fineprint { font-size: 14px; }
+  .atlas-settings select, .atlas-phase-btn strong { font-size: 17px; }
+  .atlas-hero .lead { font-size: 22px; }
+  .atlas-tagline { font-size: 19px; }
+  .atlas-takeaway { font-size: 20px; }
+  .atlas-focus p, .atlas-risk { font-size: 18px; }
+  .atlas-panel h2 { font-size: 29px; }
+  .atlas-panel h3 { font-size: 21px; }
+  .atlas-panel p, .atlas-panel li { font-size: 19px; }
+  .atlas-fineprint { font-size: 16px; }
 
-  /* Weight-category tool: forms, explanations and results. */
-  .weightKicker, .hint, .fineprint { font-size: 14px; }
-  .calcPanel h2 { font-size: 27px; }
-  .calcPanel p.muted, .field label, .feedback { font-size: 17px; }
-  .categoryLine, .divisionRow, .resultCard p:not(.resultEyebrow) { font-size: 16px; }
-  .resultCard h3, #classMap h3 { font-size: 20px; }
-  .sources h2 { font-size: 24px; }
+  /* Weight categories: controls, answers and notes. */
+  .weightKicker, .hint, .fineprint { font-size: 16px; }
+  .calcPanel h2 { font-size: 30px; }
+  .calcPanel p.muted, .field label, .feedback { font-size: 19px; }
+  .categoryLine, .divisionRow, .resultCard p:not(.resultEyebrow) { font-size: 18px; }
+  .resultCard h3, #classMap h3 { font-size: 22px; }
+  .sources h2 { font-size: 26px; }
 
-  /* Footer stays secondary, but legible. */
-  .footer-main p { font-size: 15px; }
-  .footer-links a { font-size: 14px; }
-  .footer-bottom, .photo-credit-disclosure { font-size: 13px; }
+  /* Secondary content should still be legible on desktop. */
+  .reading-percent { font-size: 14px; }
+  .footer-main p { font-size: 17px; }
+  .footer-links a { font-size: 16px; }
+  .footer-bottom, .photo-credit-disclosure { font-size: 15px; }
 }
-@media (min-width: 1101px) {
+@media (min-width: 1200px) {
   .site-nav > a.site-nav-link,
-  .site-nav .nav-dropdown > summary { font-size: 13px; }
+  .site-nav .nav-dropdown > summary { font-size: 16px; padding: 12px 14px; }
 }
