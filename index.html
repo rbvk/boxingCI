@@ -1,44 +1,77 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Inicio — BOXINGCI</title>
-<meta name="description" content="BOXINGCI es una plataforma interactiva para aprender boxeo mediante visualizadores interactivos, análisis táctico, combinaciones, defensa, desplazamientos y recursos organizados para entrenar con mayor intención."/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BOXINGCI — Inteligencia de combate</title>
+<meta name="description" content="Biblioteca visual y táctica de boxeo: guardia, rangos, golpes, defensa, atlas y herramientas. Aprende a comprender el combate."/>
 <link rel="stylesheet" href="assets/style.css"/>
-<link rel="stylesheet" href="assets/tech-photos.css"/>
+<meta name="theme-color" content="#070707"/>
+<link rel="canonical" href="https://rbvk.github.io/boxingCI/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="es_CL"/>
+<meta property="og:site_name" content="BOXINGCI"/>
+<meta property="og:title" content="BOXINGCI — Inteligencia de combate"/>
+<meta property="og:description" content="Biblioteca visual y táctica de boxeo: fundamentos, atlas y herramientas para entender el combate."/>
+<meta property="og:url" content="https://rbvk.github.io/boxingCI/"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/4f/Southpaw_right_hook_punch.jpg"/>
+<meta property="og:image:width" content="6000"/>
+<meta property="og:image:height" content="4000"/>
+<meta property="og:image:type" content="image/jpeg"/>
+<meta property="og:image:alt" content="Boxeadores en combate dentro de un ring"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BOXINGCI — Inteligencia de combate"/>
+<meta name="twitter:description" content="Biblioteca visual y táctica de boxeo: fundamentos, atlas y herramientas para entender el combate."/>
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/4/4f/Southpaw_right_hook_punch.jpg"/>
+<link rel="stylesheet" href="assets/site-ui.css"/>
+<script src="assets/site-ui.js" defer></script>
 </head>
-<body><main class="site">
-<header class="topbar">
-<a class="logoLink" href="index.html"><span class="logo">BOXINGCI</span><span class="logoSub">Inteligencia de combate</span></a>
-<nav class="nav"><a class="active" href="index.html">Inicio</a>
-<a class="" href="https://rbvk.github.io/visualizador-de-lineas/">Visualizador de líneas</a>
-<a class="" href="biblioteca/guardia/index.html">Guardia básica</a>
-<a class="" href="biblioteca/rangos/index.html">Rangos</a>
-<a class="" href="biblioteca/golpes/index.html">Golpes</a>
-<a class="" href="biblioteca/defensa/index.html">Defensa</a>
-<a class="" href="herramientas/categorias-peso/index.html">Categorías de peso</a>
-<a class="" href="atlas/recto/index.html">Atlas · Recto</a>
+<body><main class="site home-site">
+<header class="topbar site-header">
+<a class="logoLink brand" href="index.html" aria-label="BOXINGCI, inicio"><span class="logo"><span>BOXING</span><span class="brand-ci">CI</span></span><span class="logoSub">Inteligencia de combate</span></a>
+<button class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-controls="site-nav" aria-expanded="false"><span class="menu-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-toggle-label">MENÚ</span></button>
+<nav id="site-nav" class="nav site-nav" aria-label="Navegación principal">
+<a class="site-nav-link is-current" href="index.html" aria-current="page">Inicio</a>
+<details class="nav-dropdown"><summary>Biblioteca <span aria-hidden="true" class="nav-caret">⌄</span></summary><div class="nav-dropdown-panel"><a href="biblioteca/guardia/index.html">Guardia básica</a><a href="biblioteca/rangos/index.html">Rangos</a><a href="biblioteca/golpes/index.html">Golpes</a><a href="biblioteca/defensa/index.html">Defensa</a></div></details>
+<a class="site-nav-link" href="atlas/recto/index.html">Atlas del recto</a>
+<a class="site-nav-link" href="https://rbvk.github.io/visualizador-de-lineas/">Visualizador de líneas</a>
+<a class="site-nav-link" href="herramientas/categorias-peso/index.html">Categorías de peso</a>
 </nav>
 </header>
-
-<section class="hero"><figure class="boxingci-hero-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Southpaw_right_hook_punch.jpg?width=960" alt="Fotografía real de dos boxeadores en intercambio, con ataque de gancho y respuesta defensiva." loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" width="1400" height="700"/><figcaption><span class="hero-photo-kicker">EL BOXEO ES POSICIÓN, DISTANCIA Y DECISIÓN</span><strong>Estudia la técnica. Comprende el intercambio.</strong><span class="hero-photo-credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Southpaw_right_hook_punch.jpg" target="_blank" rel="noopener noreferrer">Zziwa Bashir</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a></span></figcaption></figure><div class="heroInner"><div>
-<span class="kicker">Biblioteca interactiva</span><h1>BOXINGCI</h1>
-<p class="lead">BOXINGCI es una plataforma interactiva para aprender boxeo mediante visualizadores interactivos, análisis táctico, combinaciones, defensa, desplazamientos y recursos organizados para entrenar con mayor intención.</p>
-<div class="actions"><a class="button" href="https://rbvk.github.io/visualizador-de-lineas/">Abrir Visualizador de líneas</a><a class="button secondary" href="biblioteca/rangos/index.html">Estudiar rangos</a></div>
-</div><aside class="heroPanel"><h2>Cadena táctica base</h2><div class="chain">Objetivo → Línea → Rango → Golpe → Peligro → Salida</div><p>La pregunta no es solo qué golpe lanzar, sino desde qué línea, en qué rango, con qué riesgo y con qué salida.</p></aside></div></section>
-<section class="section" aria-labelledby="toolsTitle"><div class="sectionHead"><h2 id="toolsTitle">Herramientas</h2></div>
-<div class="toolsGrid">
-<article class="card primary"><div><span class="badge red">Herramienta</span><h3>Visualizador de líneas</h3><p>Visualizador interactivo para estudiar líneas personales de ataque e intersecciones.</p></div><a href="https://rbvk.github.io/visualizador-de-lineas/">Abrir visualizador</a></article>
-<article class="card primary"><div><span class="badge red">Calculadora</span><h3>Categorías de peso</h3><p>Compara tu peso actual con tu peso objetivo según las divisiones World Boxing 2026 y LA28.</p></div><a href="herramientas/categorias-peso/index.html">Abrir calculadora</a></article>
-<article class="card primary"><div><span class="badge red">Atlas interactivo</span><h3>Recto (Cross)</h3><p>Seis fases anatómicas ilustradas, reproducción, guardia ortodoxa y zurda, y corrección técnica.</p></div><a href="atlas/recto/index.html">Abrir atlas</a></article>
-</div></section>
-<section class="section" aria-labelledby="libraryTitle"><div class="sectionHead"><h2 id="libraryTitle">Biblioteca</h2></div>
-<div class="grid libraryGrid">
-<article class="card"><div><span class="badge">Biblioteca</span><h3>Guardia básica</h3><p>Posición diagonal y cuadrada, apoyos, cadera, protección y corrección de errores frecuentes.</p></div><a href="biblioteca/guardia/index.html">Leer</a></article>
-<article class="card"><div><span class="badge">Biblioteca</span><h3>Rangos</h3><p>Clinch, corta, media, larga y fuera de distancia. Qué significa cada zona y qué funciona ahí.</p></div><a href="biblioteca/rangos/index.html">Leer</a></article>
-<article class="card"><div><span class="badge">Biblioteca</span><h3>Golpes</h3><p>Golpes útiles según línea y rango: jab, cross, hooks, uppercuts y golpes compactos.</p></div><a href="biblioteca/golpes/index.html">Leer</a></article>
-<article class="card"><div><span class="badge">Biblioteca</span><h3>Defensa</h3><p>Salidas, slips, pivotes, guardia, smothering y control del riesgo después del ataque.</p></div><a href="biblioteca/defensa/index.html">Leer</a></article>
-</div></section>
-
-<footer class="footer">BOXINGCI — Hecho por Rodolfo Valle · <a href="https://rodolfovalle.com/">rodolfovalle.com</a> · Septiembre 2026</footer>
+<section class="home-hero" aria-labelledby="hero-heading">
+<div class="home-hero-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Southpaw_right_hook_punch.jpg" alt="Dos boxeadores durante un intercambio dentro del ring" width="1500" height="1000" fetchpriority="high" loading="eager" decoding="async"/></div>
+<div class="home-hero-content">
+<span class="hero-overline"><span class="pulse-mark" aria-hidden="true"></span> BOXINGCI / INTELIGENCIA DE COMBATE</span>
+<h1 id="hero-heading">ENTIENDE<br/><em>EL BOXEO.</em><br/>DOMINA<br/>LA DECISIÓN.</h1>
+<p class="home-hero-description">Técnica, distancia y táctica. Una biblioteca visual para comprender lo que sucede en el ring.</p>
+<div class="hero-ctas"><a class="button hero-primary" href="#biblioteca">Explorar biblioteca <span aria-hidden="true">↗</span></a><a class="button hero-secondary" href="atlas/recto/index.html">Ver atlas del recto <span aria-hidden="true">→</span></a></div>
+</div>
+<div class="home-hero-foot"><span class="hero-index">01 / POSICIÓN &nbsp; 02 / DISTANCIA &nbsp; 03 / DECISIÓN</span><span class="hero-photo-credit">Fotografía: <a href="https://commons.wikimedia.org/wiki/File:Southpaw_right_hook_punch.jpg" target="_blank" rel="noopener noreferrer">Zziwa Bashir</a> · CC0</span></div>
+</section>
+<div class="home-intro-strip" aria-label="Filosofía BOXINGCI"><span>OBSERVAR</span><span aria-hidden="true">/</span><span>COMPRENDER</span><span aria-hidden="true">/</span><span>EJECUTAR</span></div>
+<section class="section editorial-section" id="biblioteca" aria-labelledby="libraryTitle">
+<div class="editorial-section-head"><div><span class="eyebrow-label">01 / CONOCIMIENTO</span><h2 id="libraryTitle">LA BIBLIOTECA<span class="section-dot">.</span></h2></div><p>Cuatro puertas de entrada al boxeo. Empieza donde quieras.</p></div>
+<div class="editorial-grid"><a href="biblioteca/guardia/index.html" class="editorial-card"><span class="editorial-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frederick_Cornelius_Boxing_Stance.jpg?width=960" alt="Boxeador adoptando una guardia básica" width="640" height="480" loading="lazy" decoding="async"/><span class="editorial-count">01</span></span><span class="editorial-body"><span class="editorial-eyebrow">Fundamentos</span><span class="editorial-title">Guardia básica<span class="editorial-arrow" aria-hidden="true">↗</span></span><span class="editorial-blurb">Todo empieza por la posición.</span></span></a>
+<a href="biblioteca/rangos/index.html" class="editorial-card"><span class="editorial-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Inside_fighter.jpg?width=960" alt="Boxeadores en intercambio a corta distancia" width="640" height="480" loading="lazy" decoding="async"/><span class="editorial-count">02</span></span><span class="editorial-body"><span class="editorial-eyebrow">Distancia</span><span class="editorial-title">Rangos<span class="editorial-arrow" aria-hidden="true">↗</span></span><span class="editorial-blurb">Dónde ocurre cada intercambio.</span></span></a>
+<a href="biblioteca/golpes/index.html" class="editorial-card"><span class="editorial-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jab_bw.png?width=960" alt="Boxeador ejecutando un jab" width="640" height="480" loading="lazy" decoding="async"/><span class="editorial-count">03</span></span><span class="editorial-body"><span class="editorial-eyebrow">Ataque</span><span class="editorial-title">Golpes<span class="editorial-arrow" aria-hidden="true">↗</span></span><span class="editorial-blurb">La técnica detrás de cada impacto.</span></span></a>
+<a href="biblioteca/defensa/index.html" class="editorial-card"><span class="editorial-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Slip1.jpg?width=960" alt="Boxeador realizando una esquiva defensiva" width="640" height="480" loading="lazy" decoding="async"/><span class="editorial-count">04</span></span><span class="editorial-body"><span class="editorial-eyebrow">Protección</span><span class="editorial-title">Defensa<span class="editorial-arrow" aria-hidden="true">↗</span></span><span class="editorial-blurb">Leer, evitar y responder.</span></span></a></div>
+</section>
+<section class="section editorial-section" id="herramientas" aria-labelledby="toolsTitle">
+<div class="editorial-section-head"><div><span class="eyebrow-label">02 / EXPLORACIÓN</span><h2 id="toolsTitle">EXPLORA MÁS<span class="section-dot">.</span></h2></div><p>Recursos interactivos que complementan la biblioteca.</p></div>
+<div class="feature-grid"><a class="feature-card" href="atlas/recto/index.html"><span class="feature-card-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/US_Navy_120201-N-ZZ999-271_Petty_Officer_2nd_Class_Carlos_Moore_throws_a_cross_punch_at_Lance_Cpl._Jonathan_Steele_during_the_finals_of_the_2012_Ar.jpg?width=960" alt="Boxeador conectando un golpe recto durante una competición" width="640" height="360" loading="lazy" decoding="async"/></span><span class="feature-card-copy"><span class="editorial-eyebrow">01 / ATLAS</span><span class="feature-title">Recto (cross)<span aria-hidden="true">↗</span></span><span class="feature-desc">Seis fases. Una cadena cinética.</span></span></a>
+<a class="feature-card" href="https://rbvk.github.io/visualizador-de-lineas/"><span class="feature-card-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Southpaw_right_hook_punch.jpg?width=960" alt="Boxeadores intercambiando golpes en el ring" width="640" height="360" loading="lazy" decoding="async"/></span><span class="feature-card-copy"><span class="editorial-eyebrow">02 / GEOMETRÍA</span><span class="feature-title">Visualizador de líneas<span aria-hidden="true">↗</span></span><span class="feature-desc">Comprende las líneas del combate.</span></span></a>
+<a class="feature-card" href="herramientas/categorias-peso/index.html"><span class="feature-card-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frederick_Allen_Cornelius_Boxing_Stance.jpg?width=960" alt="Boxeador de pie en guardia" width="640" height="360" loading="lazy" decoding="async"/></span><span class="feature-card-copy"><span class="editorial-eyebrow">03 / CONSULTA</span><span class="feature-title">Categorías de peso<span aria-hidden="true">↗</span></span><span class="feature-desc">Explora las divisiones de competición.</span></span></a></div>
+</section>
+<section class="home-outro" aria-label="Mensaje final"><span class="eyebrow-label">EL MÉTODO BOXINGCI</span><p>NO SE TRATA SOLO DE GOLPEAR.<br/><strong>SE TRATA DE ENTENDER.</strong></p><a href="#biblioteca">COMENZAR A EXPLORAR <span aria-hidden="true">↗</span></a></section>
+<footer class="footer site-footer"><div class="footer-main"><div><strong class="footer-brand">BOXING<span>CI</span></strong><p>El boxeo se comprende mejor cuando se conecta la técnica con la decisión.</p></div><div class="footer-links"><a href="index.html">Inicio</a><a href="index.html#biblioteca">Biblioteca</a><a href="index.html#herramientas">Herramientas</a><a href="https://rodolfovalle.com/" target="_blank" rel="noopener noreferrer">Rodolfo Valle ↗</a></div></div><details class="photo-credit-disclosure"><summary>Créditos y licencias de fotografías</summary><ul>
+<li><a href="https://commons.wikimedia.org/wiki/File:Southpaw_right_hook_punch.jpg" target="_blank" rel="noopener noreferrer">Portada · Zziwa Bashir</a> — CC0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Frederick_Cornelius_Boxing_Stance.jpg" target="_blank" rel="noopener noreferrer">Guardia · Angria1</a> — CC BY-SA 3.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Inside_fighter.jpg" target="_blank" rel="noopener noreferrer">Rangos · Zziwa Bashir</a> — CC0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Jab_bw.png" target="_blank" rel="noopener noreferrer">Golpes · Dr.Palm22</a> — CC BY-SA 4.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Slip1.jpg" target="_blank" rel="noopener noreferrer">Defensa · Alain Delmas</a> — CC BY-SA 3.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:US_Navy_120201-N-ZZ999-271_Petty_Officer_2nd_Class_Carlos_Moore_throws_a_cross_punch_at_Lance_Cpl._Jonathan_Steele_during_the_finals_of_the_2012_Ar.jpg" target="_blank" rel="noopener noreferrer">Atlas · U.S. Navy</a> — dominio público</li>
+</ul></details><div class="footer-bottom"><span>© 2026 BOXINGCI · Rodolfo Valle</span><span>Entrena con criterio. Aprende con intención.</span></div></footer>
 </main></body></html>
