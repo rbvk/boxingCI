@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas · Recto (Cross) — BOXINGCI</title>
+<meta name="description" content="Explora el recto de boxeo con seis fases ilustradas, guardia ortodoxa o zurda, reproducción controlada, cadena cinética y corrección de errores.">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+:root{--a-red:#e32229;--a-bg:#080c0f;--a-border:#344047;--a-muted:#bdc8cf}
+.atlas-hero{padding:28px 30px 24px;margin-bottom:16px;border:1px solid #3c4148;border-left:5px solid var(--a-red);background:linear-gradient(116deg,#1e1719,#10181b 75%);border-radius:18px}
+.atlas-crumb{color:#bfc7cb;font-size:13px;margin-bottom:16px}.atlas-crumb a{color:#c7d1d6}.atlas-kicker{font-size:12px;color:#ff757d;text-transform:uppercase;font-weight:950;letter-spacing:.13em}
+.atlas-hero h1{font-size:clamp(34px,5vw,54px);margin:8px 0 10px;line-height:1.09}.atlas-hero .lead{font-size:17px;max-width:800px;margin:0}
+.atlas-tagline{color:#e4e9ec!important;font-size:14px;margin:15px 0 0!important}
+.atlas-workbench{border:1px solid var(--a-border);border-radius:19px;overflow:hidden;background:#0a0f12;box-shadow:0 22px 46px rgba(0,0,0,.3)}
+.atlas-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid var(--a-border);flex-wrap:wrap;background:#11171b}
+.atlas-controls,.atlas-settings{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.atlas-control{border:1px solid #465158;background:#172025;border-radius:9px;color:#f5f7f7;padding:9px 12px;font:inherit;font-weight:800;cursor:pointer;min-height:43px}
+.atlas-control:hover,.atlas-control:focus-visible{border-color:#f18383;background:#243039}
+.atlas-control.primary{border-color:#d82c31;background:#cf1721;color:#fff}
+.atlas-control.primary:hover{background:#ef343e}.atlas-control:disabled{opacity:.42;cursor:not-allowed}
+.atlas-settings label{display:flex;gap:6px;align-items:center;font-size:13px;font-weight:700;color:#dde5e9;cursor:pointer;white-space:nowrap}
+.atlas-settings input[type=checkbox]{accent-color:var(--a-red);width:17px;height:17px}
+.atlas-settings select{background:#182126;color:#fff;border:1px solid #465158;padding:10px 9px;border-radius:9px;font-size:13px;font-weight:800;min-height:43px}
+.atlas-main{display:grid;grid-template-columns:minmax(290px,1.07fr) minmax(270px,.93fr);gap:0;min-height:460px}
+.atlas-visual{position:relative;background:radial-gradient(ellipse at 48% 43%,#213138 0%,#091114 64%,#060a0d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid #2b373c;min-height:470px;padding:18px 14px 12px;overflow:hidden}
+.atlas-visual:before{content:"";position:absolute;bottom:11%;left:6%;right:6%;border-top:1px solid #35464b;opacity:.4}
+.atlas-corner{position:absolute;top:16px;left:18px;font-size:11px;color:#d5dee2;letter-spacing:.12em;text-transform:uppercase;font-weight:900}
+.atlas-orientation{position:absolute;right:15px;top:16px;color:#f0a3a4;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.atlas-illustration{position:relative;width:min(92%,370px);aspect-ratio:157.67/180;max-height:420px;flex-shrink:0}
+.atlas-sprite{position:absolute;inset:0;background-image:url('../../assets/atlas-recto-phases.webp');background-size:600% 100%;background-repeat:no-repeat;background-position:0% center;will-change:background-position}
+.atlas-illustration.is-southpaw{transform:scaleX(-1)}
+.atlas-arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;filter:drop-shadow(0 2px 3px #000)}
+.atlas-arrows path,.atlas-arrows circle{stroke:#ff4d57;stroke-width:3.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.atlas-arrows .blue{stroke:#5fc9f9}.atlas-arrows .soft{stroke-width:2.5;stroke-dasharray:7 6;opacity:.8}
+.atlas-phase-index{display:flex;align-items:center;gap:10px;justify-content:space-between;width:100%;max-width:440px;padding:11px 10px 0;font-size:12px;color:#b3c2c7}
+.atlas-phase-index strong{color:#fff;font-size:13px}
+.atlas-phase-index span{display:inline-flex;align-items:center;gap:6px}
+.atlas-dot{display:inline-block;width:9px;height:9px;background:var(--a-red);border-radius:50%}
+.atlas-copy{padding:28px 25px 20px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.atlas-overline{color:#ff7379;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.13em}
+.atlas-copy h2{font-size:clamp(26px,3vw,34px);margin:4px 0 0}
+.atlas-copy p{margin:0;color:#c4cdd0;line-height:1.65}
+.atlas-takeaway{background:#17232a;border-left:4px solid #e32229;padding:13px 15px;border-radius:5px 12px 12px 5px;color:#fff!important;font-size:15px;font-weight:750}
+.atlas-focus{border:1px solid #32424a;border-radius:12px;padding:14px;background:#121a1e}
+.atlas-focus h3{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:#ffb5b8;margin:0 0 9px}
+.atlas-focus p{font-size:13px}
+.atlas-risk{padding:11px 13px;border:1px solid #594e27;background:#292314;border-radius:12px;font-size:13px;line-height:1.5;color:#ffe29e}
+.atlas-scrub-wrap{padding:12px 19px;background:#11171b;border-top:1px solid #304047}
+.atlas-scrub-wrap label{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#bccad0;font-weight:800;margin-bottom:7px}
+.atlas-scrub{display:block;width:100%;accent-color:var(--a-red);cursor:pointer}
+.atlas-phases{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid #304047;background:#101619}
+.atlas-phase-btn{border:0;border-right:1px solid #2b383e;border-top:3px solid transparent;background:transparent;color:#e9eff1;text-align:left;min-width:0;padding:13px 10px 15px;font:inherit;cursor:pointer}
+.atlas-phase-btn:last-child{border-right:0}.atlas-phase-btn[aria-pressed=true]{background:#2b1a1d;border-top-color:#ef2935}
+.atlas-phase-btn:hover,.atlas-phase-btn:focus-visible{background:#222d33;outline-offset:-3px}
+.atlas-phase-btn span{display:block;font-size:11px;font-weight:900;color:#ff8e91;margin-bottom:5px}
+.atlas-phase-btn strong{font-size:12px;line-height:1.25;display:block}
+.atlas-below{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}
+.atlas-panel{background:#11181b;border:1px solid #35424a;border-radius:17px;padding:20px 21px}
+.atlas-panel h2{font-size:22px;margin:0 0 14px}
+.atlas-panel h3{font-size:15px;margin:19px 0 6px;color:#f4f4f4}
+.atlas-panel p{font-size:14px;line-height:1.6;margin:4px 0 10px}
+.atlas-panel ul{margin:0;padding-left:20px;color:#d5dcdf}
+.atlas-panel li{margin:9px 0;line-height:1.5;font-size:14px}
+.atlas-panel li::marker{color:#ee4850}
+.atlas-error-list{display:grid;gap:8px}.atlas-error{background:#0b1012;border:1px solid #354047;border-radius:10px;padding:11px 12px}
+.atlas-error strong{display:block;font-size:14px}.atlas-error span{display:block;margin-top:5px;font-size:13px;color:#c0cdd2;line-height:1.5}
+.atlas-note{font-size:12px!important;color:#aebcc2!important}
+.atlas-fineprint{margin-top:13px;padding:16px 19px;border:1px solid #3a464b;border-radius:14px;background:rgba(255,255,255,.035);color:#b5c2c6;font-size:13px;line-height:1.65}
+.atlas-fineprint strong{color:#fff}
+.atlas-hidden{display:none!important}
+@media(max-width:970px){.atlas-main{grid-template-columns:1fr}.atlas-visual{min-height:410px;border-right:0;border-bottom:1px solid #2b373c}.atlas-copy{padding:23px}.atlas-illustration{max-height:350px;width:min(90%,310px)}}
+@media(max-width:680px){.atlas-hero{padding:21px 18px}.atlas-workbench{border-radius:15px}.atlas-toolbar{padding:11px}.atlas-controls{width:100%}.atlas-control{padding:9px 11px}.atlas-settings{gap:12px}.atlas-visual{min-height:355px;padding-top:42px}.atlas-illustration{width:min(84%,274px)}.atlas-copy{padding:20px}.atlas-phases{grid-template-columns:repeat(3,1fr)}.atlas-phase-btn:nth-child(3){border-right:0}.atlas-phase-btn:nth-child(n+4){border-top:1px solid #2b383e}.atlas-below{grid-template-columns:1fr}.atlas-panel{padding:19px}.atlas-phase-index{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.atlas-sprite{animation:none!important}}
+</style>
+</head>
+<body><main class="site">
+<header class="topbar">
+<a class="logoLink" href="../../index.html"><span class="logo">BOXINGCI</span><span class="logoSub">Inteligencia de combate</span></a>
+<nav class="nav" aria-label="Navegación principal">
+<a href="../../index.html">Inicio</a>
+<a href="https://rbvk.github.io/visualizador-de-lineas/">Visualizador de líneas</a>
+<a href="../../biblioteca/guardia/index.html">Guardia básica</a>
+<a href="../../biblioteca/rangos/index.html">Rangos</a>
+<a href="../../biblioteca/golpes/index.html">Golpes</a>
+<a href="../../biblioteca/defensa/index.html">Defensa</a>
+<a href="../../herramientas/categorias-peso/index.html">Categorías de peso</a>
+<a class="active" href="index.html" aria-current="page">Atlas · Recto</a>
+</nav></header>
+<section class="atlas-hero">
+<div class="atlas-crumb"><a href="../../index.html">BOXINGCI</a> / <a href="../../biblioteca/golpes/index.html">Golpes</a> / Recto</div>
+<span class="atlas-kicker">Atlas de técnicas · 01</span>
+<h1>El recto <span style="color:#ff7278">(Cross)</span></h1>
+<p class="lead">Un golpe de la <strong>mano atrasada</strong> construido desde la base: presión contra el suelo, rotación coordinada, extensión alineada, protección y recuperación.</p>
+<p class="atlas-tagline">6 fases ilustradas · Guardia ortodoxa y zurda · Análisis de la cadena cinética</p>
+</section>
+<section class="atlas-workbench" aria-label="Atlas interactivo del recto">
+<div class="atlas-toolbar">
+<div class="atlas-controls">
+<button type="button" id="play" class="atlas-control primary" aria-label="Reproducir la secuencia">▶ Reproducir</button>
+<button type="button" id="prev" class="atlas-control" aria-label="Fase anterior">←</button>
+<button type="button" id="next" class="atlas-control" aria-label="Fase siguiente">→</button>
+<button type="button" id="reset" class="atlas-control">↺ Reiniciar</button>
+<label for="speed" style="font-size:13px;font-weight:850;color:#d7e0e4">Velocidad</label>
+<select id="speed" class="atlas-control" aria-label="Velocidad de reproducción"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select>
+</div>
+<div class="atlas-settings">
+<label for="stance">Guardia
+<select id="stance"><option value="ortodoxa">Ortodoxa</option><option value="zurda">Zurda</option></select></label>
+<label><input type="checkbox" id="showArrows" checked> Flechas</label>
+<label><input type="checkbox" id="showChain" checked> Cadena cinética</label>
+<label><input type="checkbox" id="showErrors" checked> Errores</label>
+</div></div>
+<div class="atlas-main">
+<div class="atlas-visual">
+<div class="atlas-corner">SECUENCIA ILUSTRADA</div>
+<div class="atlas-orientation" id="orientationLabel">RECTO DERECHO</div>
+<div id="illustration" class="atlas-illustration" role="img" aria-label="Boxeador ilustrado en guardia ortodoxa, iniciando un recto de mano atrasada">
+<div class="atlas-sprite" id="sprite"></div>
+<svg class="atlas-arrows" id="arrows" viewBox="0 0 320 360" aria-hidden="true">
+<defs><marker id="arrowTip" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#ff4d57" stroke="none"/></marker><marker id="blueTip" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#5fc9f9" stroke="none"/></marker></defs>
+<g id="arrowMarks"></g>
+</svg>
+</div>
+<div class="atlas-phase-index"><span><i class="atlas-dot"></i><strong id="imagePhase">01 · Guardia inicial</strong></span><span id="figureCaption">Vista ¾ · Ortodoxa</span></div>
+</div>
+<div class="atlas-copy" aria-live="polite" aria-atomic="true">
+<div><div class="atlas-overline" id="phaseNumber">FASE 01 / 06</div><h2 id="phaseTitle">Guardia inicial</h2></div>
+<p id="phaseDescription">La base permite golpear sin perder el equilibrio.</p>
+<p class="atlas-takeaway" id="phaseCue">La mano atrasada sale de una guardia que ya puede defender.</p>
+<div class="atlas-focus" id="chainBox"><h3>Cadena cinética y anatomía</h3><p id="phaseChain"></p></div>
+<div class="atlas-risk" id="errorBox"><strong>⚠️ Vigila:</strong> <span id="phaseError"></span></div>
+</div></div>
+<div class="atlas-scrub-wrap">
+<label for="scrub"><span>Avanzar o retroceder entre fases</span><span id="scrubValue">1 de 6</span></label>
+<input id="scrub" class="atlas-scrub" type="range" min="0" max="5" step="1" value="0" aria-label="Elegir fase del golpe">
+</div>
+<div class="atlas-phases" id="phaseButtons" role="group" aria-label="Seleccionar fase"></div>
+</section>
+<div class="atlas-below">
+<section class="atlas-panel">
+<h2>🎯 Los ocho puntos técnicos</h2>
+<ul>
+<li><strong>Base:</strong> pies separados en una guardia diagonal funcional, rodillas flexibles y columna neutra. Evita hundir la pelvis o inclinarte por delante de tus apoyos.</li>
+<li><strong>Inicio:</strong> aplica presión contra el suelo mediante la pierna atrasada; el pie permite la rotación. No es un salto ni un empujón excesivo.</li>
+<li><strong>Cadera y tronco:</strong> giran coordinados hacia el objetivo mientras el abdomen estabiliza la transmisión de fuerza.</li>
+<li><strong>Hombro:</strong> acompaña la rotación y puede elevarse ligeramente para resguardar el mentón, sin encoger todo el cuello.</li>
+<li><strong>Codo:</strong> viaja detrás del puño, sin abrirse primero hacia fuera ni anunciar el golpe.</li>
+<li><strong>Muñeca:</strong> permanece alineada con antebrazo y nudillos de contacto; evita flexión o torsión bruscas.</li>
+<li><strong>Mano adelantada:</strong> conserva una función defensiva y protege la línea que el recto deja expuesta.</li>
+<li><strong>Final:</strong> frena la extensión sin hiperextender el codo y regresa enseguida a una guardia equilibrada, listo para salir, cubrir o continuar.</li>
+</ul>
+</section>
+<section class="atlas-panel" id="errorLibrary">
+<h2>⚠️ Errores frecuentes y corrección</h2>
+<div class="atlas-error-list">
+<div class="atlas-error"><strong>Solo brazo</strong><span>El tronco no acompaña. Trabaja lento: apoya, rota y extiende como una sola secuencia coordinada.</span></div>
+<div class="atlas-error"><strong>Abres el codo</strong><span>Telegráficas el recto. Mantén el codo detrás del puño, evitando una trayectoria circular.</span></div>
+<div class="atlas-error"><strong>Caes sobre la pierna adelantada</strong><span>Te quedas sin base para defenderte. Transfiere fuerza sin sobrepasar tu propio soporte.</span></div>
+<div class="atlas-error"><strong>Elevas el mentón</strong><span>Expones la mandíbula. Mantén la mirada al frente, con cuello organizado y mentón discretamente recogido.</span></div>
+<div class="atlas-error"><strong>Bajas la mano libre</strong><span>Abres una línea de contraataque. La mano adelantada sigue cubriendo.</span></div>
+<div class="atlas-error"><strong>Bloqueas el codo o doblas la muñeca</strong><span>Rompes la alineación y aumentas el riesgo de molestias. Detén la extensión con control.</span></div>
+<div class="atlas-error"><strong>No recuperas o sobrerrotas</strong><span>Terminas desequilibrado. Haz que el regreso a guardia sea parte del golpe, no una acción tardía.</span></div>
+</div>
+</section>
+<section class="atlas-panel">
+<h2>🧠 Aplicación táctica</h2>
+<h3>Preparación</h3>
+<p>El recto funciona mejor cuando controlas la línea con un jab, un cambio de ritmo o una apertura del rival. La trayectoria directa no implica que debas lanzarlo sin preparación.</p>
+<h3>Rango</h3>
+<p>Predomina en distancia media-larga útil; demasiado lejos obliga a perseguir con el cuerpo y demasiado cerca limita la extensión y favorece el clinch.</p>
+<h3>Exposición</h3>
+<p>Vigila el contraataque sobre tu línea central y la respuesta del rival mediante <em>slip</em> o paso exterior. No sacrifiques el equilibrio por alcanzar la cabeza.</p>
+<h3>Salida después del golpe</h3>
+<p>Elige una decisión: <strong>recuperar guardia, paso de salida, pivote o combinación</strong>. La salida depende de la posición y respuesta del oponente.</p>
+</section>
+<section class="atlas-panel">
+<h2>🦴 Cadena cinética</h2>
+<p><strong>Pie posterior → pierna → pelvis → tronco → cintura escapular → brazo → puño.</strong></p>
+<p>La transmisión de fuerza no es una secuencia rígida ni idéntica en cada deportista. La contribución de cada segmento cambia con la distancia, la guardia y la intención del golpe.</p>
+<h3>Qué vigilar al entrenar</h3>
+<ul><li>El pie posterior gira sin torsionar la rodilla.</li><li>La pelvis rota sin perder estabilidad del tronco.</li><li>El hombro acompaña sin tensionar de más el cuello.</li><li>El puño llega con control de muñeca y codo.</li><li>El cuerpo puede defender o desplazarse inmediatamente.</li></ul>
+<p class="atlas-note">La vista zurda refleja las ilustraciones para estudiar la orientación contraria; no reemplaza una captura específica de un boxeador zurdo.</p>
+</section>
+</div>
+<aside class="atlas-fineprint"><strong>Alcance de la animación:</strong> secuencia ilustrada de seis poses pedagógicas, no captura de movimiento ni medición biomecánica. El giro del talón trasero, la transferencia de peso y la elevación del hombro varían según contexto y escuela. Practica la técnica bajo supervisión si necesitas corrección individual.</aside>
+<footer class="footer">BOXINGCI — Hecho por Rodolfo Valle · <a href="https://rodolfovalle.com/">rodolfovalle.com</a></footer>
+</main>
+<script>
+(function(){
+'use strict';
+const phases=[
+{title:'Guardia inicial',description:'En una guardia diagonal atlética, conserva visión frontal, mentón protegido, columna neutra y rodillas flexibles. La mano atrasada está lista para iniciar el recto; la adelantada sigue siendo tu primera cobertura.',cue:'El golpe empieza antes del brazo: empieza en una base desde la que todavía puedes defender.',chain:'Base estable; pies y rodillas absorben y producen fuerza. Hombros relajados, cuello organizado y abdomen preparado para estabilizar.',error:'No cierres la postura ni cargues el peso totalmente en la pierna delantera.',arrow:'<path class="soft" d="M123 152 L284 152" marker-end="url(#arrowTip)"/>'},
+{title:'Impulso desde el suelo',description:'La pierna atrasada aplica presión contra el suelo. Tobillo, rodilla y cadera permiten que el cuerpo comience a avanzar y girar sin perder el equilibrio. El talón posterior puede liberarse según el movimiento.',cue:'Presiona y gira; no saltes ni te lances de cabeza.',chain:'Suelo → pie posterior → gemelos y extensores de cadera. El impulso se regula desde los apoyos y la pierna.',error:'Evita empujar hasta caer sobre el pie delantero o girar la rodilla sin acompañamiento del pie.',arrow:'<path d="M65 311 Q86 285 109 273" marker-end="url(#arrowTip)"/><path class="soft" d="M78 326 Q37 308 62 277"/>'},
+{title:'Rotación coordinada',description:'Pelvis y tronco giran hacia la línea de ataque. El hombro atrasado avanza a la vez que el puño inicia su recorrido. Los oblicuos y la musculatura del tronco contribuyen a transmitir el movimiento.',cue:'La cadera y el tronco acompañan al puño: ni se quedan atrás ni lo arrastran fuera de balance.',chain:'Glúteos y pelvis → oblicuos y tronco → cintura escapular. Mantén el eje corporal estable mientras rotas.',error:'No sobre-rotes los hombros ni abras el codo para buscar más potencia.',arrow:'<path d="M98 210 C45 174 92 112 150 140" marker-end="url(#arrowTip)"/><path class="soft" d="M126 188 Q169 158 155 136"/>'},
+{title:'Extensión sobre la línea',description:'La mano atrasada viaja de forma directa hasta el objetivo. El codo acompaña detrás del puño, la muñeca se mantiene alineada y el hombro se proyecta lo necesario para cubrir parcialmente el mentón.',cue:'Trayectoria recta ≠ empujar con el brazo desconectado.',chain:'Hombro y serrato anterior → brazo y tríceps → antebrazo y puño, mientras el tronco sostiene la estructura.',error:'No bloquees el codo, dobles la muñeca ni abandones la cobertura con la mano adelantada.',arrow:'<path class="blue" d="M168 121 L301 121" marker-end="url(#blueTip)"/><path class="soft" d="M191 137 L285 137"/>'},
+{title:'Contacto controlado',description:'En el instante de contacto, puño, muñeca y antebrazo permanecen alineados. El cuerpo conserva una base recuperable, la mano libre protege y la cabeza no se adelanta más allá de lo necesario.',cue:'La potencia útil llega coordinada; el contacto no justifica perder tu guardia.',chain:'Impulso y rotación convertidos en una estructura de contacto breve. La estabilidad de la muñeca importa tanto como la fuerza.',error:'No hiperextiendas el codo, levantes la barbilla ni empujes el objetivo después de contactar.',arrow:'<circle cx="291" cy="122" r="18"/><circle cx="291" cy="122" r="31" class="soft"/><path class="blue" d="M179 122 L262 122" marker-end="url(#blueTip)"/>'},
+{title:'Recuperación a guardia',description:'Retira la mano atrasada por una ruta corta, recompón la protección facial y recupera la orientación necesaria para continuar, cubrirte, salir o pivotear. No te quedes observando el golpe.',cue:'El recto termina cuando vuelves a poder defenderte.',chain:'Retracción del brazo y reorganización del tronco sobre ambos apoyos; la base queda lista para el siguiente gesto.',error:'No dejes la mano extendida ni regreses tan lento que abras una ventana de contraataque.',arrow:'<path d="M265 114 Q217 94 170 132" marker-end="url(#arrowTip)"/><path class="soft" d="M95 182 Q133 212 166 174"/>'}
+];
+const $=id=>document.getElementById(id);
+const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let step=0,speed=1,playing=false,timer=null,stance='ortodoxa';
+const buttons=phases.map((phase,i)=>{
+ const el=document.createElement('button');el.type='button';el.className='atlas-phase-btn';
+ el.innerHTML='<span>0'+(i+1)+' / 06</span><strong>'+phase.title+'</strong>';
+ el.setAttribute('aria-label','Ir a la fase '+(i+1)+': '+phase.title);
+ el.addEventListener('click',()=>{pause();show(i)});$('phaseButtons').append(el);return el;
+});
+function show(index){
+ step=(index+phases.length)%phases.length;
+ const p=phases[step];
+ const sprite=$('sprite');sprite.style.backgroundPosition=(step*20)+'% center';
+ if(!reduced&&sprite.animate)sprite.animate([{opacity:.62},{opacity:1}],{duration:190,easing:'ease-out'});
+ $('phaseNumber').textContent='FASE 0'+(step+1)+' / 06';$('phaseTitle').textContent=p.title;
+ $('phaseDescription').textContent=p.description;$('phaseCue').textContent=p.cue;
+ $('phaseChain').textContent=p.chain;$('phaseError').textContent=p.error;
+ $('imagePhase').textContent='0'+(step+1)+' · '+p.title;
+ $('scrub').value=String(step);$('scrubValue').textContent=(step+1)+' de 6';
+ $('scrub').setAttribute('aria-valuetext','Fase '+(step+1)+' de 6: '+p.title);
+ $('arrowMarks').innerHTML=$('showArrows').checked?p.arrow:'';
+ buttons.forEach((b,i)=>b.setAttribute('aria-pressed',i===step?'true':'false'));
+ $('illustration').setAttribute('aria-label','Boxeador ilustrado en guardia '+stance+'; fase '+(step+1)+': '+p.title);
+}
+function pause(){if(timer!==null){window.clearInterval(timer);timer=null}playing=false;$('play').textContent='▶ Reproducir';$('play').setAttribute('aria-label','Reproducir la secuencia');}
+function play(){pause();playing=true;$('play').textContent='Ⅱ Pausar';$('play').setAttribute('aria-label','Pausar la secuencia');
+ timer=window.setInterval(()=>show(step+1),Math.round(1150/speed));
+}
+$('play').addEventListener('click',()=>playing?pause():play());
+$('prev').addEventListener('click',()=>{pause();show(step-1)});
+$('next').addEventListener('click',()=>{pause();show(step+1)});
+$('reset').addEventListener('click',()=>{pause();show(0)});
+$('speed').addEventListener('change',e=>{speed=Number(e.target.value);if(playing)play()});
+$('stance').addEventListener('change',e=>{
+ stance=e.target.value;
+ $('illustration').classList.toggle('is-southpaw',stance==='zurda');
+ $('orientationLabel').textContent=stance==='zurda'?'RECTO IZQUIERDO':'RECTO DERECHO';
+ $('figureCaption').textContent='Vista ¾ · '+(stance==='zurda'?'Zurda':'Ortodoxa');
+ show(step);
+});
+$('showArrows').addEventListener('change',()=>show(step));
+$('showChain').addEventListener('change',()=>{$('chainBox').classList.toggle('atlas-hidden',!$('showChain').checked)});
+$('showErrors').addEventListener('change',()=>{$('errorBox').classList.toggle('atlas-hidden',!$('showErrors').checked);$('errorLibrary').classList.toggle('atlas-hidden',!$('showErrors').checked)});
+$('scrub').addEventListener('input',e=>{pause();show(Number(e.target.value))});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});
+document.addEventListener('keydown',e=>{
+ if(e.altKey||e.metaKey||e.ctrlKey)return;
+ if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;
+ if(e.key==='ArrowRight'){pause();show(step+1)}
+ else if(e.key==='ArrowLeft'){pause();show(step-1)}
+});
+show(0);
+})();
+</script>
+</body></html>

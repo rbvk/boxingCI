@@ -11,6 +11,10 @@ El visualizador se abre desde su sitio actual. La ruta anterior
 `herramientas/teoria-de-las-lineas/index.html` redirige allí para conservar
 los enlaces existentes. BOXINGCI está en español y no incluye selector de idioma.
 
+## Atlas interactivo
+
+- [Recto (Cross)](https://rbvk.github.io/boxingCI/atlas/recto/): seis fases ilustradas, reproducción por pasos y velocidades, guardia ortodoxa/zurda, cadena cinética y errores técnicos. Sin dependencias ni captura de movimiento.
+
 ## Biblioteca
 
 - Guardia básica: `biblioteca/guardia/index.html`.
