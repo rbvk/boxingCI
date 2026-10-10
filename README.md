@@ -12,6 +12,7 @@ los enlaces existentes. BOXINGCI está en español y no incluye selector de idio
 
 ## Biblioteca
 
+- Guardia básica: `biblioteca/guardia/index.html`.
 - Rangos: `biblioteca/rangos/index.html`.
 - Golpes: `biblioteca/golpes/index.html`.
 - Defensa: `biblioteca/defensa/index.html`.
