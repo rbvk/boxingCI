@@ -1,0 +1,67 @@
+.defenseArticle{overflow-wrap:break-word}
+.defenseArticle h2{scroll-margin-top:24px;line-height:1.25}
+.defenseArticle a{color:#a50d0d;text-underline-offset:3px}
+.defenseArticle a:hover{text-decoration-thickness:2px}
+.defenseArticle a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.defenseLead{font-size:1.125rem;max-width:920px}
+.defensePrinciple{padding:18px 20px;border-left:5px solid var(--red);border-radius:0 12px 12px 0;background:#f6f6f6}
+.defenseIndex{margin:24px 0 36px;padding:20px 24px;background:#f6f6f6;border:1px solid #ddd;border-radius:14px}
+.defenseIndex h2{font-size:1.125rem;margin:0 0 12px;border:0;padding:0}
+.defenseIndex ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 32px;margin:0;padding-left:22px}
+.defenseIndex li{margin:0;padding:3px 0;font-size:.9375rem}
+.defenseIndex li::marker{color:var(--red);font-weight:700}
+.defenseIndex a{display:inline-block;padding:4px 0;color:#111}
+.defenseIndexExtras{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;padding-top:12px;border-top:1px solid #ddd;font-size:.875rem}
+.defenseIndexExtras a{color:#a50d0d}
+.defenseFamily{margin-top:36px}
+.defenseNumber{color:var(--red)}
+.defenseTable{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;border:1px solid #ddd;border-radius:14px;overflow:hidden;font-size:1rem;line-height:1.55}
+.defenseTable th,.defenseTable td{padding:15px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #e3e3e3;overflow-wrap:break-word}
+.defenseTable thead th{background:#111;color:#fff;font-size:.875rem}
+.defenseTable thead th:first-child{width:36%}
+.defenseTable tbody th{color:#111;font-weight:700}
+.defenseEnglish{display:block;color:#555;font-size:.875rem;font-weight:400;margin-top:2px}
+.defenseTable tbody tr:nth-child(even){background:#f6f6f6}
+.defenseTable tbody tr:last-child>*{border-bottom:0}
+.defenseNote{margin:18px 0 0;padding:16px 20px;border-left:4px solid var(--red);border-radius:0 12px 12px 0;background:#fff3f2}
+.defenseNote p{margin:0;font-size:.9375rem}
+.defenseContext{font-size:.9375rem}
+.defenseRule{margin-top:36px;padding:22px;background:#111;border:2px solid var(--red);border-radius:16px}
+.defenseRule h2{margin-top:0;color:#fff;border-color:#555}
+.defenseRule p{color:#eee}
+.defenseDecisions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;padding:0;margin:20px 0 0;list-style:none;counter-reset:defense-step}
+.defenseDecisions li{margin:0;padding:14px 12px;background:#222;border:1px solid #444;border-radius:12px;counter-increment:defense-step}
+.defenseDecisions li::before{content:counter(defense-step);display:block;margin-bottom:8px;color:#ff7777;font-size:1.5rem;font-weight:800;line-height:1}
+.defenseDecisions strong{display:block;color:#fff;margin-bottom:5px}
+.defenseDecisions span{display:block;color:#ddd;font-size:.875rem}
+.defenseSources ul{list-style:none;padding:0;margin:0}
+.defenseSources li{padding:14px 0;margin:0;border-bottom:1px solid #e3e3e3;scroll-margin-top:24px}
+.defenseSources li:last-child{border-bottom:0}
+.defenseSources a{font-weight:700}
+.defenseSources span{display:block;margin-top:4px;color:#555;font-size:.875rem}
+@media(max-width:800px){
+  .defenseDecisions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .defenseDecisions li:last-child{grid-column:1 / -1}
+}
+@media(max-width:620px){
+  .defenseArticle{padding:20px 16px}
+  .defenseArticle h1{font-size:2rem}
+  .defenseArticle h2{font-size:1.375rem}
+  .defenseIndex{padding:18px;margin-bottom:28px}
+  .defenseIndex h2{font-size:1.125rem}
+  .defenseIndex ol{grid-template-columns:minmax(0,1fr);gap:4px}
+  .defenseIndex a{padding:6px 0}
+  .defenseFamily{margin-top:28px}
+  .defenseTable{display:block;border:0;overflow:visible}
+  .defenseTable thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .defenseTable tbody{display:block}
+  .defenseTable tbody tr{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;padding:16px;margin-bottom:12px;border:1px solid #ddd;border-left:4px solid var(--red);border-radius:12px;background:#f6f6f6}
+  .defenseTable tbody tr:last-child{margin-bottom:0}
+  .defenseTable tbody th,.defenseTable tbody td{display:block;width:auto;padding:0;border:0}
+  .defenseNote,.defensePrinciple{padding:14px 16px}
+  .defenseRule{padding:18px 14px}
+  .defenseDecisions{grid-template-columns:minmax(0,1fr)}
+  .defenseDecisions li{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px}
+  .defenseDecisions li::before{grid-row:1 / span 2;margin:0}
+  .defenseDecisions strong,.defenseDecisions span{grid-column:2}
+}
