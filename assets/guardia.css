@@ -1,0 +1,57 @@
+/* Guardia básica — utiliza las variables y tipografía existentes de BOXINGCI */
+.guardArticle{overflow-wrap:break-word}
+.guardArticle a{color:#a50d0d;text-underline-offset:3px}
+.guardArticle a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.guardArticle h2{scroll-margin-top:24px;line-height:1.25}
+.guardIntro{font-size:1.12rem;max-width:920px}
+.guardPrinciple{border-left:6px solid var(--red);border-radius:0 14px 14px 0;background:#f5f5f5;padding:18px 20px;margin:20px 0 28px;font-size:1.07rem;line-height:1.55}
+.guardEyebrow{display:inline-block;color:#a10c0c;font-size:.78rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px}
+.guardIndex{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0 30px}
+.guardIndex a{padding:9px 11px;border:1px solid #ddd;border-radius:999px;background:#f6f6f6;text-decoration:none;color:#111;font-size:.87rem;font-weight:750}
+.guardIndex a:hover{border-color:#bf1919;background:#fff3f2}
+.guardCompare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 20px}
+.guardPose{background:#f5f5f5;border:2px solid #ddd;border-radius:17px;padding:17px;min-width:0}
+.guardPose.recommended{border-color:var(--red);background:#fff9f8}
+.guardPose h3{margin:5px 0 7px}
+.guardPose p{margin:9px 0 0;font-size:.94rem}
+.guardPose svg{display:block;width:100%;height:auto;max-width:480px;margin:10px auto 6px;background:#fff;border:1px solid #e0e0e0;border-radius:12px}
+.guardFlag{display:inline-block;border-radius:999px;padding:5px 9px;background:#111;color:#fff;font-size:.75rem;font-weight:850}
+.guardPose.recommended .guardFlag{background:#b90b0b}
+.guardCaption{font-size:.85rem;color:#555;margin:0 0 23px}
+.guardTable{width:100%;border-spacing:0;border:1px solid #dadada;border-radius:13px;overflow:hidden;border-collapse:separate;line-height:1.55;margin:16px 0 10px}
+.guardTable th,.guardTable td{padding:13px 15px;text-align:left;vertical-align:top;border-bottom:1px solid #e4e4e4}
+.guardTable thead th{background:#111;color:#fff;font-size:.86rem}
+.guardTable th:first-child{width:24%}
+.guardTable tbody th{font-weight:750}
+.guardTable tbody tr:nth-child(even){background:#f7f7f7}
+.guardTable tbody tr:last-child>*{border-bottom:0}
+.guardCallout{padding:16px 19px;background:#f3f3f3;border-left:5px solid var(--red);border-radius:0 11px 11px 0;margin:17px 0}
+.guardCallout p{margin:0}
+.guardTwoCol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:15px 0}
+.guardMini{background:#f6f6f6;border:1px solid #ddd;border-radius:14px;padding:17px}
+.guardMini h3{margin:0 0 8px}
+.guardMini p{margin:0}
+.guardChecklist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.guardChecklist li{margin:0;padding:13px;background:#f6f6f6;border-left:4px solid #111;border-radius:7px}
+.guardChecklist li::before{content:"✓";color:#b00;font-weight:900;margin-right:8px}
+.guardRule{margin:26px 0 0;padding:18px 21px;background:#111;color:#fff;border:2px solid var(--red);border-radius:15px}
+.guardRule h2{color:#fff;border-color:#444;margin:0 0 12px;padding-bottom:9px}
+.guardRule p{color:#eee;margin:0}
+.guardRule strong{color:#ff8282}
+.guardSources{font-size:.93rem}
+.guardSources li{margin-bottom:12px}
+@media(max-width:700px){
+.guardArticle{padding:20px 16px}
+.guardArticle h1{font-size:2rem}
+.guardArticle h2{font-size:1.4rem}
+.guardCompare,.guardTwoCol,.guardChecklist{grid-template-columns:1fr}
+.guardPose{padding:14px}
+.guardTable{display:block;border:0;overflow:visible}
+.guardTable thead{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+.guardTable tbody{display:block}
+.guardTable tbody tr{display:grid;grid-template-columns:1fr;gap:4px;padding:13px;margin-bottom:10px;background:#f7f7f7;border:1px solid #ddd;border-left:4px solid var(--red);border-radius:10px}
+.guardTable tbody th,.guardTable tbody td{display:block;width:auto;padding:0;border:0}
+.guardTable tbody td:last-child{margin-top:3px}
+.guardIndex{gap:7px}
+.guardIndex a{font-size:.8rem}
+}
