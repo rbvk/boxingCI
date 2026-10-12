@@ -21,6 +21,7 @@ los enlaces existentes. BOXINGCI está en español y no incluye selector de idio
 - Rangos: `biblioteca/rangos/index.html`.
 - Golpes: `biblioteca/golpes/index.html`.
 - Defensa: `biblioteca/defensa/index.html`.
+- Estilos de combate: `biblioteca/estilos/index.html` — siete perfiles, heurístico piedra-papel-tijera y comparador táctico.
 
 ## GitHub Pages
 
