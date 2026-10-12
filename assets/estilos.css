@@ -95,3 +95,18 @@
 @media(max-width:720px){.styles-site{padding:12px}.styles-crumb{font-size:10px;padding-bottom:13px}.styles-hero{min-height:540px}.styles-hero-image{object-position:64% center}.styles-hero:before{background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.58)),linear-gradient(0deg,#080808b8,transparent 50%)}.styles-hero-copy{padding:28px 22px 76px}.article.styles-page .styles-hero h1{font-size:clamp(57px,13.5vw,93px)}.article.styles-page .styles-hero-copy p{font-size:18px}.styles-hero-actions a{font-size:12px;padding:13px}.styles-hero-foot{left:22px;right:14px;font-size:10px}.styles-opening{padding:45px 3px}.article.styles-page .styles-opening h2{font-size:clamp(42px,11vw,60px)}.article.styles-page .styles-opening p{font-size:17px}.styles-section{padding-top:43px}.styles-grid{grid-template-columns:1fr;gap:18px}.article.styles-page .styles-heading h2{font-size:clamp(41px,10vw,58px)}.article.styles-page .styles-heading p{font-size:16px}.styles-card-main{padding:21px 20px}.styles-card-title{font-size:41px}.style-description{font-size:17px}.style-details{padding:3px 20px 20px}.article.styles-page .style-details p{font-size:16px}.style-image-tag{font-size:11px}.style-kicker{font-size:12px}.style-number{font-size:62px}.rps-panel{padding:17px}.rps-diagram{gap:6px}.rps-node{padding:11px 4px;gap:7px}.rps-node strong{font-size:21px}.rps-node>span:last-child{font-size:9px}.rps-symbol{flex-basis:39px;width:39px;height:39px;font-size:23px}.rps-lines strong{font-size:25px}.article.styles-page .rps-lines p{font-size:16px}.article.styles-page .rps-caution{font-size:16px}.compare-panel{padding:19px}.compare-fields{grid-template-columns:1fr;gap:10px}.compare-versus{line-height:1;font-size:33px}.compare-fields select{font-size:17px}.compare-result{padding:20px}.article.styles-page .compare-result p{font-size:16px}.compare-tips{grid-template-columns:1fr;gap:8px}.styles-sources{margin-top:52px}.article.styles-page .styles-sources p,.article.styles-page .styles-sources li{font-size:15px}}
 @media(max-width:375px){.styles-hero-actions{flex-direction:column;align-items:flex-start}.styles-hero-foot span:last-child{display:none}.rps-node strong{font-size:18px}.styles-card-title{font-size:37px}}
 @media(prefers-reduced-motion:reduce){.style-detail,.styles-card-visual img{transition:none}.style-detail:hover .styles-card-visual img{transform:none}}
+
+/* Diagrama del heurístico: cierre visual del ciclo a tres lados */
+@media(min-width:721px){
+.rps-diagram{position:relative;display:block;width:100%;max-width:540px;min-height:390px;margin:auto}
+.rps-arrows{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.rps-arrows>path{fill:none;stroke:#ee555b;stroke-width:3;stroke-linecap:round;stroke-dasharray:7 7}
+.rps-node,.rps-node:nth-child(2),.rps-node:nth-child(3){position:absolute;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:9px;width:39%;max-width:190px;min-height:124px;margin:0;text-align:center;padding:14px 8px;z-index:1}
+.rps-node:nth-of-type(1){top:2px;left:50%;transform:translateX(-50%)}
+.rps-node:nth-of-type(2){left:0;bottom:0}
+.rps-node:nth-of-type(3){right:0;bottom:0}
+.rps-node>span:last-child{margin:0}
+.rps-symbol{width:41px;height:41px;flex:0 0 41px;font-size:24px}
+.rps-node strong{font-size:clamp(23px,2.15vw,31px)}
+}
+@media(max-width:720px){.rps-arrows{display:none}}
