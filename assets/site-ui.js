@@ -5,6 +5,20 @@
  const toggle=header?.querySelector('.menu-toggle');
  const nav=header?.querySelector('#site-nav');
  const dropdown=header?.querySelector('.nav-dropdown');
+
+ // Biblioteca: añadir la nueva sección a todos los menús existentes sin duplicar enlaces.
+ const libraryPanel=header?.querySelector('.nav-dropdown-panel');
+ if(libraryPanel&&!Array.from(libraryPanel.querySelectorAll('a')).some(a=>/\/boxeo-sucio\//.test(new URL(a.href,document.baseURI).pathname))){
+  const menuScript=document.querySelector('script[src*="site-ui.js"]');
+  if(menuScript){
+   const link=document.createElement('a');
+   link.href=new URL('../biblioteca/boxeo-sucio/index.html',menuScript.src).href;
+   link.textContent='Boxeo sucio';
+   if(/\/biblioteca\/boxeo-sucio\//.test(window.location.pathname))link.setAttribute('aria-current','page');
+   libraryPanel.append(link);
+  }
+ }
+
  if(header&&toggle&&nav){
   root.classList.add('has-js');
   function setMenu(open){const yes=!!open;header.classList.toggle('menu-open',yes);toggle.setAttribute('aria-expanded',String(yes));toggle.setAttribute('aria-label',yes?'Cerrar menú de navegación':'Abrir menú de navegación');const lbl=toggle.querySelector('.menu-toggle-label');if(lbl)lbl.textContent=yes?'CERRAR':'MENÚ';if(!yes&&dropdown)dropdown.open=false;}
