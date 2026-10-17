@@ -22,6 +22,7 @@ los enlaces existentes. BOXINGCI está en español y no incluye selector de idio
 - Golpes: `biblioteca/golpes/index.html`.
 - Defensa: `biblioteca/defensa/index.html`.
 - Estilos de combate: `biblioteca/estilos/index.html` — siete perfiles, heurístico piedra-papel-tijera y comparador táctico.
+- Boxeo sucio: `biblioteca/boxeo-sucio/index.html` — nueve técnicas bilingües, lectura táctica y referencias APBC/ABC.
 
 ## GitHub Pages
 
