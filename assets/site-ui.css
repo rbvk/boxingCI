@@ -303,3 +303,16 @@ html{scroll-behavior:auto!important}
 .creator-final a{color:#fff;font-size:13px;font-weight:900;letter-spacing:.08em;text-underline-offset:6px}
 @media(max-width:900px){.creator-hero{grid-template-columns:1fr}.creator-hero-text{padding:38px 28px 44px}.creator-portrait{min-height:430px;height:430px}.creator-portrait img{object-position:50% 32%}.creator-feature{gap:25px}}
 @media(max-width:650px){.hero-author-byline{margin:-4px 0 16px;gap:4px 10px;font-size:12px}.creator-hero h1{font-size:clamp(56px,13vw,78px)}.creator-hero-text{padding:38px 23px 35px}.creator-portrait{height:380px;min-height:380px}.creator-feature{grid-template-columns:1fr;padding:50px 8px}.creator-principles,.creator-bottom-grid{grid-template-columns:1fr}.creator-principles{margin-bottom:45px}.creator-feature h2{font-size:53px}.creator-card h2{font-size:48px}}
+
+/* BOXINGCI · crédito enlazado de creación en cabecera y pie de portada */
+.header-brand-block{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0}
+.header-brand-block .brand{align-self:flex-start}
+.header-brand-credit{padding-left:1px;color:#bababe;font-size:10px;font-family:var(--body);font-weight:650;line-height:1.35;text-decoration:none;white-space:nowrap}
+.header-brand-credit strong{color:#fff;font-weight:850;text-decoration:underline;text-decoration-color:#f04444;text-underline-offset:3px}
+.header-brand-credit:hover strong,.header-brand-credit:focus-visible strong{color:#ff8080}
+.footer-brand-credit{margin-top:8px!important;color:#bdbdbd!important;font-size:clamp(12px,1.1vw,15px)!important}
+.footer-brand-credit a{color:#fff;font-weight:850;text-decoration:underline;text-decoration-color:#e94848;text-underline-offset:4px}
+.footer-brand-credit a:hover{color:#ff8080}
+@media(min-width:901px){.header-brand-credit{font-size:clamp(10px,.8vw,12px)}}
+@media(max-width:900px){.header-brand-block{gap:4px}.header-brand-credit{font-size:11px}}
+@media(max-width:380px){.header-brand-credit{font-size:10px}}
