@@ -316,3 +316,6 @@ html{scroll-behavior:auto!important}
 @media(min-width:901px){.header-brand-credit{font-size:clamp(10px,.8vw,12px)}}
 @media(max-width:900px){.header-brand-block{gap:4px}.header-brand-credit{font-size:11px}}
 @media(max-width:380px){.header-brand-credit{font-size:10px}}
+
+/* BOXINGCI transversal: footer visible siempre; navegación compacta en pantallas medianas */
+@media (min-width:901px) and (max-width:1150px){.site-nav > .about-creator-link{display:none!important}}
